@@ -22,5 +22,12 @@ welcomeMessage = Label(window,
                        pady=40)
 welcomeMessage.pack()
 
+# Adds place for user to enter a message 
+entry = Entry(window, 
+              font=("Arial", 20),
+              bg='#191970',
+              fg='#21fc0d')
+entry.pack()
+
 # Places GUI on computer screen that listen for events! 
 window.mainloop()
