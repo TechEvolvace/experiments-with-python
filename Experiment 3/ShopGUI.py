@@ -29,5 +29,16 @@ entry = Entry(window,
               fg='#21fc0d')
 entry.pack()
 
+# Add the Product images to the GUI!
+product_1_image = PhotoImage(file = "../Assets/Shop-GUI-Product-1.gif")
+
+product_2_image = PhotoImage(file="../Assets/Shop-GUI-Product-2.gif")
+
+product_3_image = PhotoImage(file="../Assets/Shop-GUI-Product-3.gif")
+
+product_1_image.pack()
+product_2_image.pack()
+product_3_image.pack()
+
 # Places GUI on computer screen that listen for events! 
 window.mainloop()
