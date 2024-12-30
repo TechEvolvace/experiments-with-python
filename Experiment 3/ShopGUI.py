@@ -1,4 +1,5 @@
 from tkinter import * 
+from PIL import Image, ImageTk
 
 # Instantiates an instance of a window 
 window = Tk()
@@ -30,15 +31,24 @@ entry = Entry(window,
 entry.pack()
 
 # Add the Product images to the GUI!
-product_1_image = PhotoImage(file = "../Assets/Shop-GUI-Product-1.gif")
+product_1_image = Image.open("./Assets/Shop-GUI-Product-1.gif")
 
-product_2_image = PhotoImage(file="../Assets/Shop-GUI-Product-2.gif")
+product_2_image = Image.open("./Assets/Shop-GUI-Product-2.gif")
 
-product_3_image = PhotoImage(file="../Assets/Shop-GUI-Product-3.gif")
+product_3_image = Image.open("./Assets/Shop-GUI-Product-3.gif")
 
-product_1_image.pack()
-product_2_image.pack()
-product_3_image.pack()
+resized_product_1_image = product_1_image.resize((250, 250))
+
+resized_product_2_image = product_2_image.resize((250, 250))
+
+resized_product_3_image = product_3_image.resize((250, 250))
+
+product_image_gallery = Canvas(window, width=640, height=600)
+product_image_gallery.pack()
+product_image_gallery.create_image(0, 20, image = product_1_image)
+product_image_gallery.create_image(0, 90, image = product_2_image)
+product_image_gallery.create_image(0, 140, image = product_3_image)
+
 
 # Places GUI on computer screen that listen for events! 
 window.mainloop()
