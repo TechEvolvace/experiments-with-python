@@ -54,9 +54,9 @@ reformatted_product_3_image = ImageTk.PhotoImage(resized_product_3_image)
 # Displaying each product image in the GUI!
 product_image_gallery = Canvas(window, width=640, height=600)
 product_image_gallery.pack()
-product_image_gallery.create_image(0, 20, image = reformatted_product_1_image)
-product_image_gallery.create_image(0, 90, image = reformatted_product_2_image)
-product_image_gallery.create_image(0, 140, image = reformatted_product_3_image)
+product_image_gallery.create_image(0, 200, image = reformatted_product_1_image)
+product_image_gallery.create_image(0, 400, image = reformatted_product_2_image)
+product_image_gallery.create_image(0, 600, image = reformatted_product_3_image)
 
 
 # Places GUI on computer screen that listen for events! 
